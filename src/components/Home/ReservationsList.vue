@@ -51,6 +51,10 @@ import {
   IonLabel,
   IonInput,
   alertController,
+  IonToggle,
+  IonButton,
+  IonCard,
+  IonCardContent,
 } from "@ionic/vue";
 export default {
   name: "ReservationsList",
@@ -60,6 +64,10 @@ export default {
     IonSelectOption,
     IonLabel,
     IonInput,
+    IonToggle,
+    IonButton,
+    IonCard,
+    IonCardContent,
   },
   props: {
     informations: Object,

@@ -20,12 +20,15 @@
 </template>
 
 <script>
-import { modalController } from "@ionic/vue";
+import { modalController, IonButton, IonCard } from "@ionic/vue";
 import Modal from "./Modal";
 
 export default {
   name: "ReservationsLocal",
-  components: {},
+  components: {
+    IonButton,
+    IonCard,
+  },
   props: {
     reservations: Object,
   },

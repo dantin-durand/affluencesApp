@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { IonPage, IonContent } from "@ionic/vue";
+import { IonPage, IonContent, IonButton } from "@ionic/vue";
 import axios from "axios";
 import moment from "moment";
 import InputDateForm from "@/components/Home/InputDateForm.vue";
@@ -41,6 +41,7 @@ export default {
     ReservationsList,
     IonContent,
     IonPage,
+    IonButton,
   },
   data() {
     return {

@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import { IonContent, IonHeader, IonIcon } from "@ionic/vue";
-import { man, flag, location, chevronBack } from "ionicons/icons";
+import { IonContent, IonHeader, IonIcon, IonButton } from "@ionic/vue";
+import { chevronBack } from "ionicons/icons";
 import moment from "moment";
 import axios from "axios";
 
@@ -36,6 +36,7 @@ export default {
     IonContent,
     IonHeader,
     IonIcon,
+    IonButton,
   },
   name: "Modal",
   props: {
@@ -53,9 +54,6 @@ export default {
 
   setup() {
     return {
-      man,
-      flag,
-      location,
       chevronBack,
     };
   },

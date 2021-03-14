@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { IonItem, IonDatetime, alertController } from "@ionic/vue";
+import { IonItem, IonDatetime, alertController, IonButton } from "@ionic/vue";
 import moment from "moment";
 import axios from "axios";
 
@@ -25,6 +25,7 @@ export default {
   components: {
     IonItem,
     IonDatetime,
+    IonButton,
   },
   data() {
     return {
