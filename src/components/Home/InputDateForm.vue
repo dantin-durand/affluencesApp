@@ -6,6 +6,8 @@
       :min="ActualyDate"
       v-model="reservationInputDate"
       display-format="DD / MM / YYYY"
+      done-text="Valider"
+      cancel-text="Annuler"
       :value="ActualyDate"
     ></ion-datetime>
   </ion-item>
