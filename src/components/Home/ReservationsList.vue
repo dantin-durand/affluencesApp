@@ -1,44 +1,46 @@
 <template>
-  <ion-card>
-    <ion-card-content>
-      <ion-item>
-        <ion-label>Selectionnez une horaire</ion-label>
-        <ion-select
-          ok-text="Valider"
-          cancel-text="Fermer"
-          v-model="selectedHourReservation"
-          interface="action-sheet"
-        >
-          <ion-select-option
-            v-for="reservation in reservationList"
-            :key="reservation.hour"
-            :value="reservation.hour"
-            >{{ reservation.hour }}H {{ reservation.reservations }}/{{
-              informations.reservationLimit
-            }}
-          </ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Adresse mail</ion-label>
+  <form @submit.prevent="sendReservation">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Selectionnez une horaire</ion-label>
+          <ion-select
+            ok-text="Valider"
+            cancel-text="Fermer"
+            v-model="selectedHourReservation"
+            interface="action-sheet"
+          >
+            <ion-select-option
+              v-for="reservation in reservationList"
+              :key="reservation.hour"
+              :value="reservation.hour"
+              >{{ reservation.hour }}H {{ reservation.reservations }}/{{
+                informations.reservationLimit
+              }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Adresse mail</ion-label>
 
-        <ion-input type="email" v-model="email"></ion-input>
-      </ion-item>
-      <br />
-      <div class="check-zone">
-        <ion-toggle @click="cgucheck"></ion-toggle>
-        <ion-label>j'ai lu et j'accepte les CGU</ion-label>
-      </div>
+          <ion-input type="email" v-model="email"></ion-input>
+        </ion-item>
+        <br />
+        <div class="check-zone">
+          <ion-toggle @click="cgucheck"></ion-toggle>
+          <ion-label>j'ai lu et j'accepte les CGU</ion-label>
+        </div>
 
-      <br />
-      <ion-button
-        class="btn-default"
-        shape="round"
-        @click.prevent="sendReservation"
-        >Réserver
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+        <br />
+        <ion-button
+          class="btn-default"
+          shape="round"
+          @click.prevent="sendReservation"
+          >Réserver
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
 </template>
 
 <script>

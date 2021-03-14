@@ -10,7 +10,7 @@
       <br />
       <br />
       <br />
-      <form class="container">
+      <div class="container">
         <div class="header-form" v-if="activePage == 2">
           <ion-button class="btn-default" shape="round" @click="backPage"
             >Retour
@@ -22,7 +22,7 @@
           :informations="this.informations"
           v-if="activePage == 2"
         />
-      </form>
+      </div>
     </ion-content>
   </ion-page>
 </template>
